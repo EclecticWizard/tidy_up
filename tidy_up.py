@@ -3,7 +3,7 @@
 import os
 
 # target directory to be tidied
-target = "C:\\Users\\Jack\\Downloads\\"
+target = "TargetDirectoyPath"
 print(target)
 
 # map = directory name: relevant file extensions
