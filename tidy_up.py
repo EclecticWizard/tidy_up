@@ -7,11 +7,12 @@ target = "TargetDirectoyPath"
 print(target)
 
 # map = directory name: relevant file extensions
-dirs = {"Documents": ("txt","doc","docx","pdf","xls","xlsx"), 
-         "Music": ("mp3","wav","flac","aac","alac","ogg"), 
-         "Videos": ("mp4","mov","mkv"),
-         "Archives": ("rar","zip"), 
-         "Pictures": ("jpg", "png")}
+dirs = {"Documents": (".txt",".doc",".docx",".pdf",".xls",".xlsx"), 
+         "Music": (".mp3",".wav",".flac",".aac",".alac",".ogg"), 
+         "Videos": (".mp4",".mov",".mkv"),
+         "Archives": (".rar",".zip", ".7z"), 
+         "Pictures": (".jpg", ".png"),
+         "Executables": (".exe", ".msi", ".py")}
 
 def move_files(target: str, dirs: map, directory: str):
     """move the files to the relevant directory"""
@@ -32,6 +33,8 @@ for directory in dirs.keys():
     except:
         print("An error occurred, this is likely to be because the directories already exist.")
     move_files(target, dirs, directory)
+    
+
     
 
 
